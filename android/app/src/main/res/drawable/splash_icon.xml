@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash: the shield outline draws itself, then the check strokes in. 108dp canvas, content in the middle 72dp. -->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="108dp"
+            android:height="108dp"
+            android:viewportWidth="108"
+            android:viewportHeight="108">
+            <path
+                android:name="ring"
+                android:fillColor="#00000000"
+                android:pathData="M54,20 a34,34 0 1,1 -0.01,0 Z"
+                android:strokeAlpha="0"
+                android:strokeColor="#22D3EE"
+                android:strokeWidth="1.5" />
+            <path
+                android:name="shield"
+                android:fillColor="#00000000"
+                android:pathData="M54,33 L37,39.5 V52 C37,62.5 44.2,72.4 54,75 C63.8,72.4 71,62.5 71,52 V39.5 Z"
+                android:strokeColor="#22D3EE"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeWidth="3.2"
+                android:trimPathEnd="0" />
+            <path
+                android:name="check"
+                android:fillColor="#00000000"
+                android:pathData="M46,54 L52,60 L63,47.5"
+                android:strokeColor="#2FBF71"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeWidth="3.6"
+                android:trimPathEnd="0" />
+        </vector>
+    </aapt:attr>
+
+    <target android:name="shield">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="620"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+    <target android:name="check">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="280"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathEnd"
+                android:startOffset="560"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+    <target android:name="ring">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="400"
+                android:propertyName="strokeAlpha"
+                android:startOffset="300"
+                android:valueFrom="0"
+                android:valueTo="0.45"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

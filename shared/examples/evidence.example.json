@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "sample_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "analysis_version": 1,
+  "static": {
+    "manifest": {
+      "package": "com.demo.expfixture",
+      "version_name": "1.0",
+      "version_code": 1,
+      "min_sdk": 26,
+      "target_sdk": 34,
+      "debuggable": false,
+      "permissions": ["android.permission.INTERNET", "android.permission.READ_SMS"],
+      "has_launcher_activity": true
+    },
+    "signing": {"schemes": ["v2"], "cert_sha256": "bbbb", "debug_cert": true},
+    "code": {"dex_count": 1, "class_count": 120, "short_name_ratio": 0.12, "dynamic_loading": false},
+    "files": {"embedded_executables": [], "high_entropy_blobs": []},
+    "strings": {"urls": ["http://c2.demo-sentinel.invalid/beacon"], "ips": [], "domains": ["c2.demo-sentinel.invalid"]}
+  },
+  "dynamic": null,
+  "reputation": {"bad_hash_hit": false, "good_hash_hit": false, "yara_hits": []},
+  "signals": [
+    {"id": "sig_1", "code": "SIG-PERM-001", "name": "SMS read permission", "severity": "high", "category": "data_access", "source": "manifest", "detail": "Declares android.permission.READ_SMS", "attck": ["T1636"]},
+    {"id": "sig_2", "code": "SIG-SIGN-001", "name": "Debug signing certificate", "severity": "medium", "category": "integrity", "source": "signing", "detail": "Signed with the Android debug certificate", "attck": []},
+    {"id": "sig_3", "code": "SIG-STR-001", "name": "Hard-coded beacon-style URL", "severity": "medium", "category": "network", "source": "strings", "detail": "http://c2.demo-sentinel.invalid/beacon", "attck": []}
+  ],
+  "partial": false,
+  "partial_reasons": []
+}

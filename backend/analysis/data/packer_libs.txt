@@ -1,0 +1,9 @@
+libjiagu.so
+libsecexe.so
+libsecmain.so
+libexec.so
+libexecmain.so
+libDexHelper.so
+libbaiduprotect.so
+libnqshield.so
+libshella.so

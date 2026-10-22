@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} - Sentinel SOC{% endblock %}
+{% block page_name %}{{ page_name }}{% endblock %}
+{% block heading %}{{ heading }}{% endblock %}
+{% block content %}
+  <div id="app" class="app" data-role="{% if is_analyst_flag %}analyst{% else %}viewer{% endif %}" aria-live="off">
+    <p class="muted">Loading...</p>
+  </div>
+{% endblock %}
+{% block page_data %}
+  {{ page_data|json_script:"page-data" }}
+  <script type="application/json" id="csrf-root">{"token": "{{ csrf_token }}"}</script>
+{% endblock %}

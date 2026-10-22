@@ -1,0 +1,120 @@
+   ▲ Next.js 15.5.27
+   - Local:        http://localhost:3100
+   - Network:      http://172.19.192.1:3100
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 25.2s
+ ○ Compiling /login ...
+ ✓ Compiled /login in 3.8s (553 modules)
+ GET /login 200 in 5795ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1268ms (623 modules)
+ GET / 200 in 2229ms
+ ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling /network ...
+ ✓ Compiled /network in 3.5s (638 modules)
+ GET /network 200 in 4751ms
+ ○ Compiling /submissions/[id] ...
+ ✓ Compiled /submissions/[id] in 2.8s (645 modules)
+ GET /submissions/b49a315b-9d44-4c6c-938b-d428d108e9a2 200 in 5330ms
+ GET /submissions/b49a315b-9d44-4c6c-938b-d428d108e9a2 200 in 140ms
+ GET /submissions/b49a315b-9d44-4c6c-938b-d428d108e9a2 200 in 94ms
+ GET /submissions/b49a315b-9d44-4c6c-938b-d428d108e9a2 200 in 132ms
+ GET / 200 in 110ms
+ GET /network 200 in 898ms
+ ○ Compiling /submissions ...
+ ✓ Compiled /submissions in 6.2s (652 modules)
+ GET /submissions 200 in 9300ms
+ GET /submissions 200 in 344ms
+ GET /submissions 200 in 503ms
+ GET /submissions 200 in 303ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 3.2s (411 modules)
+ GET /login 200 in 4952ms
+ GET /submissions 200 in 10035ms
+ GET / 200 in 1155ms
+ GET /submissions 200 in 462ms
+ ✓ Compiled in 14.7s (654 modules)
+ GET /submissions 200 in 641ms
+ GET / 200 in 7536ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 3.6s (412 modules)
+ GET /login 200 in 5803ms
+ GET / 200 in 998ms
+ GET / 200 in 216ms
+ GET / 200 in 128ms
+ GET / 200 in 131ms
+ GET / 200 in 117ms
+ GET /submissions 200 in 179ms
+ ○ Compiling /devices ...
+ ✓ Compiled /devices in 3.3s (666 modules)
+ GET /devices 200 in 3834ms
+ GET /network 200 in 645ms
+ ○ Compiling /graph ...
+ ✓ Compiled /graph in 5.9s (675 modules)
+ GET /graph 200 in 6857ms
+ ○ Compiling /remediation ...
+ ✓ Compiled /remediation in 6.2s (691 modules)
+ GET /remediation 200 in 6883ms
+ GET /pipeline 200 in 6907ms
+ GET /graph 200 in 3051ms
+ ○ Compiling /rules ...
+ ✓ Compiled /rules in 2.7s (698 modules)
+ GET /graph 200 in 1307ms
+ GET /pipeline 200 in 583ms
+ GET / 200 in 141ms
+ GET /graph 200 in 103ms
+ GET / 200 in 89ms
+ GET /submissions 200 in 519ms
+ GET /devices 200 in 175ms
+ GET /network 200 in 171ms
+ GET /submissions/9b884cd4-fa40-4c51-9e09-1c4aa716aac5 200 in 591ms
+ GET /graph 200 in 108ms
+ GET /pipeline 200 in 131ms
+ GET /remediation 200 in 210ms
+ GET /rules 200 in 375ms
+ GET /submissions 200 in 132ms
+ GET /submissions/b467f12e-989d-4799-8f21-bdbebd15508e 200 in 151ms
+ GET /rules 200 in 208ms
+ ✓ Compiled in 1747ms (685 modules)
+ GET /rules 200 in 320ms
+ GET /rules 200 in 603ms
+ GET /rules 200 in 157ms
+ GET /rules 200 in 154ms
+ GET /rules 200 in 110ms
+ GET /remediation 200 in 143ms
+ GET /rules 200 in 167ms
+ GET /remediation 200 in 103ms
+ GET /remediation 200 in 930ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.1s (418 modules)
+ GET / 200 in 3868ms
+ GET / 200 in 202ms
+ GET / 200 in 115ms
+ GET / 200 in 2455ms
+ GET /pipeline 200 in 926ms
+ GET / 200 in 416ms
+ ○ Compiling /submissions ...
+ ✓ Compiled /submissions in 3.9s (418 modules)
+ GET /submissions 200 in 4513ms
+ ○ Compiling /submissions/[id] ...
+ ✓ Compiled /submissions/[id] in 1427ms (423 modules)
+ GET /submissions/7ad00531-4e45-4b4e-8973-38cbdf7cb538 200 in 2129ms
+ ○ Compiling /devices ...
+ ✓ Compiled /devices in 2.1s (428 modules)
+ GET /devices 200 in 2609ms
+ ○ Compiling /network ...
+ ✓ Compiled /network in 1215ms (434 modules)
+ GET /network 200 in 1544ms
+ GET /graph 200 in 453ms
+ GET /pipeline 200 in 247ms
+ GET /remediation 200 in 325ms
+ GET /rules 200 in 317ms
+ GET / 200 in 244ms
+ GET /rules 200 in 136ms
+ GET /pipeline 200 in 160ms
+ GET /graph 200 in 131ms
+ GET /network 200 in 145ms
+ GET /submissions 200 in 179ms

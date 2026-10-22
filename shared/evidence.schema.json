@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sentinel Evidence v1",
+  "type": "object",
+  "required": ["schema_version","sample_sha256","analysis_version","static","dynamic","reputation","signals","partial","partial_reasons"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "sample_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "analysis_version": {"type": "integer"},
+    "static": {
+      "type": "object",
+      "properties": {
+        "manifest": {"type": "object"},
+        "signing": {"type": "object"},
+        "code": {"type": "object"},
+        "files": {"type": "object"},
+        "strings": {"type": "object"}
+      }
+    },
+    "dynamic": {"type": ["object","null"]},
+    "reputation": {"type": "object"},
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","code","name","severity","category","source","detail"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^sig_[0-9]+$"},
+          "code": {"type": "string"},
+          "name": {"type": "string"},
+          "severity": {"enum": ["info","low","medium","high","critical"]},
+          "category": {"type": "string"},
+          "source": {"enum": ["manifest","signing","code","files","strings","reputation","dynamic"]},
+          "detail": {"type": "string"},
+          "attck": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "partial": {"type": "boolean"},
+    "partial_reasons": {"type": "array", "items": {"type": "string"}}
+  }
+}

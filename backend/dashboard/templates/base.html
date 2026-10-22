@@ -1,0 +1,44 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Sentinel SOC{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'soc.css' %}">
+</head>
+<body data-page="{% block page_name %}{% endblock %}">
+  <a class="skip-link sr-only" href="#main">Skip to content</a>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="sidebar__brand">Sentinel SOC</div>
+      <ul class="sidebar__nav">
+        <li><a href="{% url 'overview' %}" {% if request.resolver_match.url_name == 'overview' %}aria-current="page"{% endif %}>Overview</a></li>
+        <li><a href="{% url 'submissions' %}" {% if request.resolver_match.url_name == 'submissions' or request.resolver_match.url_name == 'submission' %}aria-current="page"{% endif %}>Submissions</a></li>
+        <li><a href="{% url 'devices' %}" {% if request.resolver_match.url_name == 'devices' %}aria-current="page"{% endif %}>Devices</a></li>
+        <li><a href="{% url 'remediation' %}" {% if request.resolver_match.url_name == 'remediation' %}aria-current="page"{% endif %}>Remediation</a></li>
+        <li><a href="{% url 'rules' %}" {% if request.resolver_match.url_name == 'rules' or request.resolver_match.url_name == 'rule' %}aria-current="page"{% endif %}>Rules</a></li>
+        <li><a href="{% url 'settings' %}" {% if request.resolver_match.url_name == 'settings' %}aria-current="page"{% endif %}>Settings</a></li>
+        <li><a href="{% url 'demo' %}" {% if request.resolver_match.url_name == 'demo' %}aria-current="page"{% endif %}>Demo console</a></li>
+      </ul>
+      <div class="sidebar__user">
+        <span>{{ request.user.get_username }}</span>
+        <span class="pill">{{ user_role }}</span>
+        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="btn btn--ghost" type="submit">Sign out</button></form>
+      </div>
+    </nav>
+    <div class="shell__main">
+      <header class="topbar">
+        <h1 class="topbar__title">{% block heading %}{% endblock %}</h1>
+        <span id="conn-badge" class="conn conn--reconnecting" role="status" aria-live="polite">Reconnecting...</span>
+      </header>
+      <main id="main" class="content">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  {% block page_data %}{% endblock %}
+  <script src="{% static 'ws-client.js' %}?v=5"></script>
+  <script src="{% static 'soc.js' %}?v=5"></script>
+</body>
+</html>

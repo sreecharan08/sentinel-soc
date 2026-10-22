@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sentinel Verdict v1",
+  "type": "object",
+  "required": ["schema_version","submission_id","sample_sha256","label","score","confidence","techniques","explanation","needs_more_verification","verification_requests","recommended_action","provider","generated_at"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "submission_id": {"type": "string"},
+    "sample_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "label": {"enum": ["malicious","suspicious","benign","unknown"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "techniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","name","confidence","evidence_ids"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "tactic": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence_ids": {"type": "array", "items": {"type": "string", "pattern": "^sig_[0-9]+$"}}
+        }
+      }
+    },
+    "explanation": {"type": "string"},
+    "needs_more_verification": {"type": "boolean"},
+    "verification_requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind","reason"],
+        "properties": {
+          "kind": {"enum": ["dynamic","reputation","manual_review"]},
+          "reason": {"type": "string"},
+          "focus": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "recommended_action": {"enum": ["none","monitor","uninstall"]},
+    "provider": {
+      "type": "object",
+      "required": ["name","version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "fallback_from": {"type": ["string","null"]}
+      }
+    },
+    "generated_at": {"type": "string"}
+  }
+}

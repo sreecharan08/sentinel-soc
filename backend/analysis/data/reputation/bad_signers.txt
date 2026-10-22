@@ -1,0 +1,1 @@
+# one signing-certificate SHA-256 per line (lowercase hex).

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+backend/.venv/
+backend/staticfiles/
+backend/data/
+backend/logs/
+*.sqlite3
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/.env.local
+web/*.tsbuildinfo
+web/next-env.d.ts
+
+# Android
+android/.gradle/
+android/app/build/
+android/*/build/
+android/*/dist/
+android/local.properties
+*.apk
+
+# OS/editor
+.DS_Store

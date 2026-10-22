@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "categories": {
+    "dynamic_loading": ["Ldalvik/system/DexClassLoader;", "Ldalvik/system/PathClassLoader;", "Ldalvik/system/InMemoryDexClassLoader;"],
+    "shell_exec": ["Ljava/lang/Runtime;->exec", "Ljava/lang/ProcessBuilder;->start"],
+    "sms_send": ["Landroid/telephony/SmsManager;->sendTextMessage", "Landroid/telephony/SmsManager;->sendMultipartTextMessage"],
+    "reflection": ["Ljava/lang/reflect/Method;->invoke"],
+    "package_install": ["Landroid/content/pm/PackageInstaller;->createSession", "Landroid/content/pm/PackageInstaller$Session;->commit"],
+    "device_admin_actions": ["Landroid/app/admin/DevicePolicyManager;->lockNow", "Landroid/app/admin/DevicePolicyManager;->wipeData"],
+    "accessibility_actions": ["Landroid/accessibilityservice/AccessibilityService;->performGlobalAction", "Landroid/accessibilityservice/AccessibilityService;->dispatchGesture"],
+    "crypto_decrypt": ["Ljavax/crypto/Cipher;->doFinal"]
+  }
+}

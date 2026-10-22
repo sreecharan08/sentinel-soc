@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stage 1 design tokens (dark theme only). Verdict colours never carry meaning alone: every chip has an icon and text. -->
+<resources>
+    <color name="bg_0">#0B0F14</color>
+    <color name="bg_1">#11171E</color>
+    <color name="bg_2">#1A222C</color>
+    <color name="border">#263040</color>
+    <color name="text_1">#E6EDF3</color>
+    <color name="text_2">#9AA7B5</color>
+    <color name="text_3">#7D8A99</color>
+    <color name="accent">#22D3EE</color>
+    <color name="v_malicious">#F0524F</color>
+    <color name="v_suspicious">#F5A524</color>
+    <color name="v_benign">#2FBF71</color>
+    <color name="v_unknown">#8B98A8</color>
+    <color name="info">#4C9AFF</color>
+    <color name="on_fill">#0B0F14</color>
+
+    <!-- Soft (16%) fills for pill chips and avatar badges -->
+    <color name="v_malicious_soft">#29F0524F</color>
+    <color name="v_suspicious_soft">#29F5A524</color>
+    <color name="v_benign_soft">#292FBF71</color>
+    <color name="v_unknown_soft">#298B98A8</color>
+    <color name="info_soft">#294C9AFF</color>
+    <color name="accent_soft">#2922D3EE</color>
+</resources>

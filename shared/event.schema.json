@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sentinel WebSocket Event v1",
+  "type": "object",
+  "required": ["v","event_id","type","ts","submission_id","stage","step","level","message","data"],
+  "properties": {
+    "v": {"const": 1},
+    "event_id": {"type": "integer"},
+    "type": {"enum": ["submission.created","submission.status_changed","pipeline.event","verdict.ready","remediation.updated","rule.generated","device.heartbeat"]},
+    "ts": {"type": "string"},
+    "submission_id": {"type": ["string","null"]},
+    "stage": {"enum": ["intake","static_analysis","dynamic_analysis","reasoning","verdict","remediation","rules","device","system"]},
+    "step": {"type": "string"},
+    "level": {"enum": ["debug","info","warn","error"]},
+    "message": {"type": "string"},
+    "data": {"type": "object"}
+  }
+}

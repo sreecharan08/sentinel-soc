@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sentinel</string>
+
+    <string name="channel_alerts">Security alerts</string>
+    <string name="channel_status">Protection status</string>
+    <string name="notif_service_title">Sentinel is protecting this phone</string>
+    <string name="notif_service_text">Watching for new apps</string>
+    <string name="notif_service_text_off">Protection is paused</string>
+    <string name="notif_malicious_title">Dangerous app detected</string>
+    <string name="notif_suspicious_title">Suspicious app</string>
+    <string name="notif_benign_title">App checked: safe</string>
+    <string name="notif_verdict_text">%1$s looks risky (%2$d%% confidence). Tap to review.</string>
+    <string name="notif_proposed_title">Your SOC analyst recommends removing %1$s</string>
+    <string name="notif_proposed_text">Tap to review and confirm</string>
+    <string name="notif_public_title">Security alert</string>
+
+    <string name="toggle_on">On</string>
+    <string name="toggle_off">Off</string>
+    <string name="status_alerts_off">Alerts are off</string>
+    <string name="status_alerts_off_sub">Tap to allow notifications</string>
+    <string name="status_paused">Protection off</string>
+    <string name="status_paused_sub">New installs are not being checked</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_offline_sub">Will retry automatically</string>
+    <string name="status_protected">Protected</string>
+    <string name="status_protected_sub">%1$s - synced %2$ds ago</string>
+
+    <string name="stat_today">Scanned today</string>
+    <string name="stat_threats">Threats</string>
+    <string name="stat_pending">Pending</string>
+    <string name="empty_title">Nothing scanned yet</string>
+    <string name="empty_text">Install an app and it will show up here.</string>
+    <string name="fix_notifications">Allow notifications</string>
+    <string name="scan_device">Scan device</string>
+    <string name="report_scanning">Scanning %1$d app(s)...</string>
+    <string name="report_clean">No malicious apps found. Checked %1$d app(s): %2$d suspicious, %3$d safe.</string>
+    <string name="report_malicious">%1$d malicious app(s) found: %2$s</string>
+    <string name="scan_none">No user apps found to check.</string>
+
+    <string name="pair_title">Sentinel</string>
+    <string name="pair_subtitle">Connect this phone to your SOC</string>
+    <string name="pair_server_label">Server address</string>
+    <string name="pair_code_label">Pairing code</string>
+    <string name="pair_hint_emulator">Emulator? use %1$s. Phone on USB? run adb reverse tcp:9000 tcp:9000 and keep the default.</string>
+    <string name="pair_button">Pair device</string>
+    <string name="pair_busy">Pairing...</string>
+    <string name="pair_footer">Find the code in the dashboard under Devices, then Pair device.</string>
+    <string name="pair_error_code">That code is wrong or expired. Generate a new one in the dashboard.</string>
+    <string name="pair_error_server">The server had a problem. Try again in a moment.</string>
+    <string name="pair_error_unreachable">Can\'t reach the server. Check the address and that both devices are on the same network.</string>
+
+    <string name="verdict_title">Scan result</string>
+    <string name="verdict_malicious">MALICIOUS</string>
+    <string name="verdict_suspicious">SUSPICIOUS</string>
+    <string name="verdict_benign">SAFE</string>
+    <string name="verdict_unknown">UNKNOWN</string>
+    <string name="verdict_description">Verdict: %1$s</string>
+    <string name="verdict_no_summary">No details yet.</string>
+    <string name="verdict_provider">Analysed by %1$s</string>
+    <string name="banner_removed_earlier">This app is no longer installed.</string>
+    <string name="banner_uninstalled">%1$s was removed.</string>
+    <string name="banner_declined">You kept this app. The SOC has been told.</string>
+    <string name="banner_cancelled">The analyst cancelled the uninstall request.</string>
+    <string name="banner_failed">Android couldn\'t remove this app. It may be a system or protected app.</string>
+    <string name="banner_too_large">This app is bigger than the 100 MB check limit, so it was not analysed.</string>
+    <string name="banner_upload_failed">The app could not be checked. It will be retried when possible.</string>
+    <string name="banner_analysing">Checking this app. This usually takes under a minute.</string>
+    <string name="btn_uninstall">Uninstall %1$s</string>
+    <string name="btn_keep">Keep for now</string>
+    <string name="hint_system_confirm">Android will ask you to confirm.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_unpair">Unpair</string>
+
+    <string name="status_label_queued">Waiting in queue</string>
+    <string name="status_label_static_analysis">Inspecting the app</string>
+    <string name="status_label_awaiting_upload">Sending file</string>
+    <string name="status_label_removed">Removed</string>
+    <string name="status_label_error">Something went wrong</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_server">Server</string>
+    <string name="settings_poll_title">Check for commands</string>
+    <string name="settings_poll_row">Check for commands</string>
+    <string name="poll_seconds_value">Every %1$d s</string>
+    <string name="settings_notify_safe">Notify on safe apps</string>
+    <string name="settings_repair">Re-pair device</string>
+    <string name="settings_unpair">Unpair and clear data</string>
+    <string name="settings_about">About</string>
+    <string name="unpair_title">Remove this phone from the SOC?</string>
+    <string name="unpair_message">Scan history on this phone will be deleted.</string>
+    <string name="about_text">Version %1$s - contract %2$s - device %3$s</string>
+    <string name="scan_row_description">%1$s. %2$s</string>
+    <string name="removed_was">was %1$s</string>
+    <string name="not_scanned">NOT SCANNED</string>
+    <string name="tap_to_scan">Tap to scan</string>
+    <string name="installed_title">Scan</string>
+    <string name="installed_count">Scan (%1$d)</string>
+    <string name="installed_hint">The monitored apps that are installed on this phone. Tap an app to see its result, or to scan it if it has not been checked. Removed apps leave this list and stay in Recent scans.</string>
+    <string name="installed_empty">None of the monitored apps are installed on this phone.</string>
+    <string name="notif_detected_title">New app detected</string>
+    <string name="notif_action_details">Details</string>
+    <string name="notif_detected_text">Sentinel is checking %1$s now.</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_activity">Activity</string>
+    <string name="nav_inbox">Inbox</string>
+    <string-array name="timeline_steps">
+        <item>Detected</item>
+        <item>Uploaded</item>
+        <item>Static</item>
+        <item>Reasoning</item>
+        <item>Verdict</item>
+    </string-array>
+    <string name="timeline_title">Scan pipeline</string>
+    <string name="timeline_live">LIVE</string>
+    <string name="timeline_empty">No server steps yet. They appear here as the SOC works on this app.</string>
+    <string name="threat_found_toast">Threat found: %1$s</string>
+    <string name="why_title">Why this verdict</string>
+    <string name="signals_title">Evidence (%1$d signals)</string>
+    <string name="iocs_title">Network indicators</string>
+    <string name="open_graph">Open 3D threat graph</string>
+    <string name="risk_score">risk score %1$.2f</string>
+    <string name="confidence">confidence</string>
+    <string name="ioc_flagged">FLAGGED</string>
+    <string name="ioc_c2">C2 / BOT</string>
+    <string name="ioc_host">HOST</string>
+    <string name="ioc_url">URL</string>
+    <string name="graph_title">Threat graph</string>
+    <string name="graph_hint">Drag to rotate · pinch to zoom · tap a node</string>
+    <string name="graph_empty">No evidence to plot yet. Open this again once the verdict is ready.</string>
+    <string name="node_app">Scanned app</string>
+    <string name="node_technique">MITRE ATT&amp;CK technique</string>
+    <string name="node_signal">Signal</string>
+    <string name="node_host">Network host</string>
+    <string name="inbox_title">SOC inbox</string>
+    <string name="inbox_intro">Requests from your SOC analyst. Removing an app always goes through Android\'s own confirmation; keeping it tells the analyst you said no.</string>
+    <string name="inbox_open">Waiting for you (%1$d)</string>
+    <string name="inbox_resolved">Resolved (%1$d)</string>
+    <string name="inbox_empty">No open requests. Your SOC analyst has nothing for you right now.</string>
+    <string name="inbox_remove">Remove app</string>
+    <string name="inbox_message">Your SOC analyst recommends removing this app.</string>
+    <string name="inbox_kept">Kept · the SOC was told</string>
+    <string name="inbox_keep_failed">Couldn\'t reach the SOC. Try again when online.</string>
+    <string name="rem_state">%1$s · scanned %2$s ago</string>
+    <string name="action_details">View details</string>
+    <string name="action_uninstall_now">Uninstall now</string>
+    <string name="status_threat">Threat found</string>
+    <string name="status_threat_sub">%1$d app(s) need your attention</string>
+    <string name="orb_hint">Drag to rotate</string>
+    <string name="live_on">LIVE</string>
+    <string name="live_off">POLLING</string>
+    <string name="headsup_title">Sentinel · now</string>
+    <string name="headsup_verdict">%1$s: %2$s</string>
+    <string name="headsup_request">SOC analyst asks you to remove %1$s</string>
+    <string name="score_title">Security score</string>
+    <string name="history_title">Last 14 days</string>
+    <string name="history_legend">● malicious  ● suspicious  ● safe  ● checking</string>
+    <string name="grade_excellent">Excellent</string>
+    <string name="grade_good">Good</string>
+    <string name="grade_at_risk">At risk</string>
+    <string name="grade_critical">Critical</string>
+    <string name="reason_malicious">%1$d malicious app(s) installed</string>
+    <string name="reason_suspicious">%1$d suspicious app(s) installed</string>
+    <string name="reason_protection_off">Protection is off</string>
+    <string name="reason_alerts_off">Alerts are off</string>
+    <string name="reason_offline">Not synced with the SOC</string>
+    <string name="reason_requests">%1$d analyst request(s) waiting</string>
+    <string name="reason_all_clear">No open risks. Keep protection on.</string>
+    <string name="refreshed">Up to date</string>
+</resources>
